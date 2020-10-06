@@ -1,0 +1,25 @@
+<main>
+    <!--Contains list Of all the issues received from api-->
+    <section class="issue-list">
+        <% results.result.forEach(issue => {%>
+        <div class="issue">
+            <a href="/issue/<%= issue.number%>">
+                <h4 class="issue-title">#<%= issue.number%> <%= issue.title %></h4>
+            </a>
+            <p>State: <%= issue.state %> </p>
+        </div>
+        <% }); %>
+
+    </section>
+
+    <!--Pagination in accordance to the total number of issues-->
+    <div class="page-numbers">
+        <% if(results.prev) {%>
+        <a class="page-num" href="/?page=<%=results.prev.page%>"><%=results.prev.page%></a>
+        <% } %>
+        <p class="cur-page"><%=results.curr%></p>
+        <% if(results.next) {%>
+        <a class="page-num" href="/?page=<%=results.next.page%>"><%=results.next.page%></a>
+        <% } %>
+    </div>
+</main>

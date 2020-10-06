@@ -1,0 +1,14 @@
+<!--Displaying details of a single issue-->
+<main>
+    <div class="issue-single">
+        <h4 class="issue-title">#<%= issue.number%> <%= issue.title %></h4>
+        <p>State: <%= issue.state %> </p>
+        <p>Date Created: <%= issue.created_at.split("T")[0] %> </p>
+        <p>Owner: <a href="<%= issue.user.html_url %>" target="_blank"><%= issue.user.login %> </a></p>
+        <div>
+            <label for="body">Description:</label>
+            <p class="desc"><%= issue.body %> </p>
+        </div>
+    </div>
+    <a class="link-home" href="/">Home</a>
+</main>

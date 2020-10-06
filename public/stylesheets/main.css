@@ -1,0 +1,97 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #f3f3f3f3;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    background-color: #eeeeee;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+
+.issue,
+.issue-single {
+    width: 100%;
+    max-width: 768px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+}
+
+.issue-single>* {
+    padding: 10px 0;
+}
+
+.issue-list {
+    margin: 10px;
+}
+
+.issue-list .issue:last-of-type {
+    border-bottom: none;
+}
+
+.issue:hover,
+.link-home:hover {
+    background: rgba(0, 0, 0, 0.103);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.page-numbers {
+    display: flex;
+    width: 100%;
+    max-width: 768px;
+    margin: 10px auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-num {
+    height: 20px;
+    width: 30px;
+    border: 1px solid black;
+    margin: 5px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.page-num:hover {
+    color: rgba(0, 0, 0, 0.281);
+    border: 1px solid rgba(0, 0, 0, 0.281);
+}
+
+.link-home {
+    margin-top: 10px;
+    height: 25px;
+    width: 50px;
+    align-self: center;
+    background-color: #ffffff;
+    text-align: center;
+    border: 1px solid #cccccc;
+    border-radius: 10%;
+}
+
+.desc {
+    text-align: center;
+}
